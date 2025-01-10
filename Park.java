@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class Park {
     private String parkName;
-    private Attraction attraction;
     private ArrayList<Attraction> attractions = new ArrayList<Attraction>();
 
     public Park(String parkName) {
@@ -13,22 +12,20 @@ public class Park {
         return this.parkName;
     }
 
-    public void setParkAtrction(String attractionName, String workingHours, double price) {
+    public void setParkAttraction(String attractionName, String workingHours, double price) {
         this.attractions.add(new Attraction(attractionName, workingHours, price));
     }
 
-    public void getAtractionsInConsole() {
-            if (this.attractions.isEmpty()) {
-                System.out.println("This park has no attractions");
-            } else {
-                System.out.println("This park has " + this.attractions.size() + " attractions");
-                for(Attraction attraction : this.attractions) {
-                    attraction.printInfo();
-                }
+    public void getAttractionsInConsole() {
+        if (this.attractions.isEmpty()) {
+            System.out.println("This park has no attractions");
+        } else {
+            System.out.println("This park has " + this.attractions.size() + " attractions");
+            for (Attraction attraction : this.attractions) {
+                attraction.printInfo();
             }
         }
-
-
+    }
 
     public class Attraction {
         private String attractionName;

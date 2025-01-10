@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -18,8 +16,8 @@ public class Main {
         }
 
         Park park = new Park("Devil May Cray");
-        park.setParkAtrction("Roller coaster", "9:00 - 18:00", 2.5);
-        park.getAtractionsInConsole();
+        park.setParkAttraction("Roller coaster", "9:00 - 18:00", 2.5);
+        park.getAttractionsInConsole();
 
     }
 }
